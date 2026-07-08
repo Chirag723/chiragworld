@@ -1,0 +1,235 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio - Me</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e2e2e2",
+                        "on-error": "#690005",
+                        "inverse-primary": "#5e5e5e",
+                        "inverse-on-surface": "#313030",
+                        "surface-bright": "#393939",
+                        "on-background": "#e5e2e1",
+                        "outline": "#988e90",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-primary": "#303030",
+                        "on-tertiary-container": "#767575",
+                        "surface-variant": "#353534",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "tertiary-fixed": "#e5e2e1",
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary-container": "#000000",
+                        "surface": "#131313",
+                        "tertiary": "#c8c6c5",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#c6c6c6",
+                        "background": "#131313",
+                        "on-secondary": "#2f3131",
+                        "error-container": "#93000a",
+                        "primary": "#c6c6c6",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-surface-variant": "#cfc4c5",
+                        "on-secondary-container": "#b4b5b5",
+                        "surface-dim": "#131313",
+                        "secondary-container": "#454747",
+                        "error": "#ffb4ab",
+                        "surface-container": "#201f1f",
+                        "secondary": "#c6c6c7",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-primary-container": "#757575",
+                        "outline-variant": "#4c4546",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary": "#313030",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "primary-container": "#000000",
+                        "on-secondary-fixed-variant": "#454747",
+                        "inverse-surface": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "2rem",
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "margin-mobile": "24px",
+                        "stack-lg": "4rem",
+                        "stack-xl": "8rem",
+                        "container-max": "1440px",
+                        "stack-sm": "1rem"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "label-mono": ["JetBrains Mono"],
+                        "display-lg-mobile": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "headline-sm": ["Geist"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-mono": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .reveal-text {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+
+        @keyframes revealUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glitch-hover:hover {
+            animation: glitch 0.2s cubic-bezier(.25, .46, .45, .94) both infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col pt-16">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/10 dark:bg-surface/10 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-200">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-label-mono text-label-mono tracking-widest text-on-surface dark:text-on-surface uppercase glitch-hover cursor-pointer">CHIRAG.world</div>
+<!-- Desktop Nav -->
+<ul class="hidden md:flex gap-gutter items-center">
+<li class=""><a class="font-body-md text-body-md text-on-surface dark:text-on-surface font-bold border-b border-on-surface pb-1" href="#">Me</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:opacity-100 hover:text-on-surface transition-all duration-200" href="#">Socials</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:opacity-100 hover:text-on-surface transition-all duration-200" href="#">Posts</a></li>
+</ul>
+<!-- Mobile Nav Toggle (Hidden on Desktop for this purely desktop-focused fixed grid example, but included for structure) -->
+<div class="md:hidden flex items-center">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<button class="text-on-surface hover:opacity-100 opacity-60 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-stack-xl py-stack-xl">
+<!-- Hero Section -->
+<section class="min-h-[716px] flex flex-col justify-center gap-stack-md">
+<div class="flex flex-col gap-unit">
+
+<h1 class="font-display-lg-mobile md:font-display-lg text-on-surface reveal-text delay-200 max-w-[14ch] font-bold text-[120px] md:text-[160px]">CHIRAG</h1>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mt-stack-md">
+<div class="md:col-span-6 lg:col-span-5 reveal-text delay-300"><p class="font-body-lg text-body-lg text-on-surface-variant">I spend an unhealthy amount of time playing, watching, and following football, pushing myself in the gym, and replaying the same Eminem tracks for the hundredth time. The rest is usually spent tinkering with technology, building projects, and satisfying an endless curiosity for how things work behind the surface.</p></div>
+</div>
+
+</section>
+<!-- Featured Project (Bento Style) -->
+<section class="flex flex-col gap-stack-md reveal-text delay-500">
+  <div class="flex justify-between items-end border-b border-outline-variant/30 pb-4">
+    <h2 class="font-headline-sm text-headline-sm text-on-surface">Match Day Clicks</h2>
+    <span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Photography</span>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+    <div class="md:col-span-4 aspect-[3/4] bg-surface-container-low overflow-hidden border border-outline-variant/10 group">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVOGmB41769Os3RYsXaH7n0yBdNatJjw_Vw4yMu2crogpCAemfvHpnXZpL4eg0s8GsK-O4qv1Xk44jz6QNtivxvXOwCcbJTep1X-lIBYwamBJkurfoIstG7_Svk71u_pebLlpdERlz1WE44RCh4N4PAOlOUUhMeCDG0suqGnCN0WfM-ilRjFgOtrOjsIjdPxDVqTkhhnwMg1GkektSKAQv7Kx7XVo7Xft-ezz76E_xJN_3uq_xIzyedYmibcmROozDNJYAh8OWxsyR" alt="Match Day 1" class="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+    </div>
+    <div class="md:col-span-4 aspect-[3/4] bg-surface-container-low overflow-hidden border border-outline-variant/10 group">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH8rxNddCoarYkxdSS4S_j2oA3KcqTF5tcb6ymIUZZKIxq25M13szs1pLeTTxnjM6OPufjQNoGmExpuYFMNYMYnUVa72DB0wkNqvZ_re3o6OZD18FTOUN6hG0dO51xgp9Lmr_dbo6_cykNiy-yIaEoTv3svD_pD2w9IBvdRjLrzAs9IicX-XrsF75iYvmj0Hl8_7B8LJ0mim25WV4XsGIwTOfuhCWiI-ombZMMP3aiIDSsK9lofbx69XNLYdB4B7EiK-b_-zYBApMv" alt="Match Day 2" class="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+    </div>
+    <div class="md:col-span-4 aspect-[3/4] bg-surface-container-low overflow-hidden border border-outline-variant/10 group">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrOYtpNe1zQgFCfWFj32i3lKoDtgrlV3eO5X9oJbgAxCqlP5fFWi0B9lcP1VpZt-q1j1LStsPTR0xutMCa-Pl-qXiL-GBj4IwkbX7UVD7DxlfoxnNGlf4MxO4JtEHCzRGcKzIH01W12nYG8oM-CSoJvmfvelsdI8X6J3yp1qsGnfMcI_wuKzo6QmixQTCdVO7eELI0LfXhW-VDZhCCKSpaEIpwDiZQeTydneAOtwDCCCmyMoLMh114blku4F1nC47w90KI-OqGFvlT" alt="Match Day 3" class="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+    </div>
+  </div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-md border-t border-outline-variant/10 bg-surface dark:bg-surface mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-4">
+<div class="font-label-mono text-label-mono text-on-surface uppercase tracking-widest">© 2026 Designed By Chirag</div>
+
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll reveals if needed for longer pages
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Example target for future elements
+            // document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+
+
+
+
+
+
+
+
+</body></html>

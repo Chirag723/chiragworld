@@ -1,0 +1,337 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Socials | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#e2e2e2",
+                      "on-error": "#690005",
+                      "inverse-primary": "#5e5e5e",
+                      "inverse-on-surface": "#313030",
+                      "surface-bright": "#393939",
+                      "on-background": "#e5e2e1",
+                      "outline": "#988e90",
+                      "surface-container-high": "#2a2a2a",
+                      "on-surface": "#e5e2e1",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "on-primary": "#303030",
+                      "on-tertiary-container": "#767575",
+                      "surface-variant": "#353534",
+                      "on-primary-fixed-variant": "#474747",
+                      "on-primary-fixed": "#1b1b1b",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "tertiary-fixed": "#e5e2e1",
+                      "primary-fixed": "#e2e2e2",
+                      "tertiary-container": "#000000",
+                      "surface": "#131313",
+                      "tertiary": "#c8c6c5",
+                      "surface-container-highest": "#353534",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "on-error-container": "#ffdad6",
+                      "surface-tint": "#c6c6c6",
+                      "background": "#131313",
+                      "on-secondary": "#2f3131",
+                      "error-container": "#93000a",
+                      "primary": "#c6c6c6",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-surface-variant": "#cfc4c5",
+                      "on-secondary-container": "#b4b5b5",
+                      "surface-dim": "#131313",
+                      "secondary-container": "#454747",
+                      "error": "#ffb4ab",
+                      "surface-container": "#201f1f",
+                      "secondary": "#c6c6c7",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "on-primary-container": "#757575",
+                      "outline-variant": "#4c4546",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "surface-container-low": "#1c1b1b",
+                      "on-tertiary": "#313030",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "primary-container": "#000000",
+                      "on-secondary-fixed-variant": "#454747",
+                      "inverse-surface": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-md": "2rem",
+                      "gutter": "32px",
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "margin-mobile": "24px",
+                      "stack-lg": "4rem",
+                      "stack-xl": "8rem",
+                      "container-max": "1440px",
+                      "stack-sm": "1rem"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Geist"
+                      ],
+                      "headline-lg": [
+                              "Geist"
+                      ],
+                      "label-mono": [
+                              "JetBrains Mono"
+                      ],
+                      "display-lg-mobile": [
+                              "Geist"
+                      ],
+                      "display-lg": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Geist"
+                      ],
+                      "headline-sm": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-mono": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "80px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        /* Custom styles for high-end feel */
+        body {
+            background-color: #000000; /* Force pure black background as per specs */
+            color: #e5e2e1;
+        }
+        
+        .social-link-group:hover .social-item:not(:hover) {
+            opacity: 0.3;
+        }
+
+        .social-item {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .social-item:hover {
+            transform: translateX(16px);
+        }
+
+        .social-arrow {
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .social-item:hover .social-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Subtle grid background pattern */
+        .bg-grid {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 64px 64px;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-on-surface selection:text-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/10 dark:bg-surface/10 backdrop-blur-xl border-b border-outline-variant/30 ease-out duration-200">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-label-mono text-label-mono tracking-widest text-on-surface dark:text-on-surface" href="#">CHIRAG.world</a>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:opacity-100 hover:text-on-surface transition-all duration-200 py-2" href="#">Me</a>
+<a class="font-body-md text-body-md text-on-surface dark:text-on-surface font-bold border-b border-on-surface py-2 hover:opacity-100 hover:text-on-surface transition-all duration-200" href="#">Socials</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:opacity-100 hover:text-on-surface transition-all duration-200 py-2" href="#">Posts</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-unit">
+<button aria-label="Toggle dark mode" class="text-primary dark:text-primary p-2 rounded-full hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 md:pt-32 pb-stack-xl flex flex-col justify-center relative overflow-hidden bg-grid">
+<!-- Ambient subtle glow -->
+<div class="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full relative z-10">
+<header class="mb-stack-lg">
+<p class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest mb-stack-sm">Connect</p>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
+                    Find me <br> <span class="text-on-surface-variant">online.</span>
+</h1>
+</header>
+<!-- Social Links List -->
+<div class="social-link-group flex flex-col gap-0 border-t border-outline-variant/30 w-full max-w-4xl"><!-- Instagram -->
+<a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant/30 cursor-pointer" href="https://www.instagram.com/chirag_jassi23">
+<div class="flex items-center gap-6">
+<span class="font-label-mono text-label-mono text-on-surface-variant w-8">01</span>
+<h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">Instagram</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">chirag_jassi23</span>
+<span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- YouTube -->
+<a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant/30 cursor-pointer" href="https://www.youtube.com/@evilshideout">
+<div class="flex items-center gap-6">
+<span class="font-label-mono text-label-mono text-on-surface-variant w-8">02</span>
+<h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">YouTube</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">@evilshideout</span>
+<span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- Discord -->
+<a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant/30 cursor-pointer" href="https://discord.gg/t9y99QqNWs">
+<div class="flex items-center gap-6">
+<span class="font-label-mono text-label-mono text-on-surface-variant w-8">03</span>
+<h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">Discord</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">Chirag_7</span>
+<span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- Subreddit -->
+<a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant/30 cursor-pointer" href="https://www.reddit.com/r/FootballDelhi/">
+<div class="flex items-center gap-6">
+<span class="font-label-mono text-label-mono text-on-surface-variant w-8">04</span>
+<h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">Subreddit</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">r/FootballDelhi</span>
+<span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- Email -->
+<!-- GitHub -->
+<a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant/30 cursor-pointer" href="https://github.com/Chirag723">
+<div class="flex items-center gap-6">
+<span class="font-label-mono text-label-mono text-on-surface-variant w-8">05</span>
+<h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">GitHub</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">Chirag723</span>
+<span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- X (Twitter) -->
+<a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant/30 cursor-pointer" href="https://x.com/CHIRAG_230">
+<div class="flex items-center gap-6">
+<span class="font-label-mono text-label-mono text-on-surface-variant w-8">06</span>
+<h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">X</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">CHIRAG_230</span>
+<span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- LinkedIn -->
+<a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant/30 cursor-pointer" href="https://www.linkedin.com/in/chirag-jassi-4097352a2/">
+<div class="flex items-center gap-6">
+<span class="font-label-mono text-label-mono text-on-surface-variant w-8">07</span>
+<h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">LinkedIn</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">Chirag Jassi</span>
+<span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a><a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant/30 cursor-pointer" href="mailto:jassichirag7@gmail.com">
+<div class="flex items-center gap-6">
+<span class="font-label-mono text-label-mono text-on-surface-variant w-8">08</span>
+<h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">Email</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">jassichirag7@gmail.com</span>
+<span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="mail">mail</span>
+</div>
+</a></div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-md border-t border-outline-variant/10 bg-surface dark:bg-surface z-10 relative">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-4 md:gap-0">
+<div class="font-label-mono text-label-mono text-on-surface">© 2026 Designed By Chirag</div>
+
+</div>
+</footer>
+
+
+
+
+
+
+</body></html>
