@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Socials | Chirag Portfolio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet">
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -116,63 +121,70 @@
         * {
             border-radius: 0px !important;
         }
-        
+
         /* Exception for circular elements if any */
-        .rounded-full, .rounded-full * {
+        .rounded-full,
+        .rounded-full * {
             border-radius: 9999px !important;
         }
 
-        .social-link-group:hover .social-item:not(:hover) {
-            opacity: 0.3;
-        }
+        @media (hover: hover) {
+            .social-link-group:hover .social-item:not(:hover) {
+                opacity: 0.3;
+            }
 
-        .social-item {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+            .social-item:hover {
+                transform: translateX(16px);
+            }
 
-        .social-item:hover {
-            transform: translateX(16px);
-        }
+            .social-arrow {
+                opacity: 0;
+                transform: translateX(-10px);
+                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
 
-        .social-arrow {
-            opacity: 0;
-            transform: translateX(-10px);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            .social-item:hover .social-arrow {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
-
-        .social-item:hover .social-arrow {
-            opacity: 1;
-            transform: translateX(0);
+        @media (hover: none) {
+            .social-arrow {
+                opacity: 1;
+                transform: translateX(0);
+                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
         }
 
         /* Subtle grid background pattern */
         .bg-grid {
-            background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
             background-size: 64px 64px;
         }
-        
+
         /* Adapt grid background for light theme */
         :root:not(.dark) .bg-grid {
-            background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
         }
     </style>
 </head>
-<body class="bg-background text-on-background min-h-screen flex flex-col pt-16 transition-colors duration-300">
+
+<body class="bg-background text-on-background min-h-screen flex flex-col pt-24 sm:pt-16 transition-colors duration-300">
     <!-- TopNavBar -->
     <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant transition-all duration-300">
-        <div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
-            <a href="index.html" class="font-label-mono text-label-mono tracking-widest text-on-surface uppercase glitch-hover cursor-pointer">CHIRAG.world</a>
+        <div class="flex flex-wrap sm:flex-nowrap justify-between items-center min-h-[4rem] py-3 sm:py-0 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full gap-y-4">
+            <a href="index.html" class="font-label-mono text-label-mono tracking-widest text-on-surface uppercase glitch-hover cursor-pointer shrink-0">CHIRAG.world</a>
             
             <!-- Navigation Links -->
-            <ul class="flex gap-6 md:gap-gutter items-center">
+            <ul class="flex gap-4 sm:gap-6 md:gap-gutter items-center order-last sm:order-none w-full sm:w-auto justify-center sm:justify-start">
                 <li><a class="font-body-md text-body-md text-on-surface-variant opacity-60 hover:opacity-100 hover:text-on-surface transition-all duration-200" href="index.html">Me</a></li>
                 <li><a class="font-body-md text-body-md text-on-surface font-bold border-b-2 border-on-surface pb-1 transition-colors duration-200" href="socials.html">Socials</a></li>
             </ul>
             
             <!-- Actions -->
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4 shrink-0">
                 <button aria-label="Toggle dark mode" class="text-on-surface hover:opacity-100 opacity-60 transition-all duration-200 p-2 hover:bg-surface-container-low rounded-full w-10 h-10 flex items-center justify-center">
                     <span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
                 </button>
@@ -181,14 +193,18 @@
     </nav>
 
     <!-- Main Content Canvas -->
-    <main class="flex-grow pt-24 md:pt-32 pb-stack-xl flex flex-col justify-center relative overflow-hidden bg-grid w-full">
+    <main
+        class="flex-grow pt-24 md:pt-32 pb-stack-xl flex flex-col justify-center relative overflow-hidden bg-grid w-full">
         <!-- Ambient subtle glow -->
         <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
-        
+
         <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full relative z-10">
             <header class="mb-stack-lg">
-                <p class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest mb-stack-sm">Connect</p>
-                <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight font-bold tracking-tight">
+                <p
+                    class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest mb-stack-sm">
+                    Connect</p>
+                <h1
+                    class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight font-bold tracking-tight">
                     Find me <br> <span class="text-on-surface-variant">online.</span>
                 </h1>
             </header>
@@ -196,98 +212,140 @@
             <!-- Social Links List -->
             <div class="social-link-group flex flex-col gap-0 border-t border-outline-variant w-full max-w-4xl">
                 <!-- Instagram -->
-                <a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant cursor-pointer" href="https://www.instagram.com/chirag_jassi23" target="_blank" rel="noopener noreferrer">
-                    <div class="flex items-center gap-6">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant w-8">01</span>
-                        <h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">Instagram</h2>
+                <a class="social-item group flex flex-col sm:flex-row sm:items-center justify-between py-6 md:py-10 border-b border-outline-variant cursor-pointer gap-4 sm:gap-0"
+                    href="https://www.instagram.com/chirag_jassi23" target="_blank" rel="noopener noreferrer">
+                    <div class="flex items-center gap-4 sm:gap-6 w-full sm:w-auto">
+                        <span class="font-label-mono text-label-mono text-on-surface-variant w-6 sm:w-8 shrink-0">01</span>
+                        <h2
+                            class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">
+                            Instagram</h2>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">chirag_jassi23</span>
-                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+                    <div class="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto pl-10 sm:pl-0">
+                        <span
+                            class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">chirag_jassi23</span>
+                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl"
+                            data-icon="arrow_forward">arrow_forward</span>
                     </div>
                 </a>
-                
+
                 <!-- YouTube -->
-                <a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant cursor-pointer" href="https://www.youtube.com/@evilshideout" target="_blank" rel="noopener noreferrer">
-                    <div class="flex items-center gap-6">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant w-8">02</span>
-                        <h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">YouTube</h2>
+                <a class="social-item group flex flex-col sm:flex-row sm:items-center justify-between py-6 md:py-10 border-b border-outline-variant cursor-pointer gap-4 sm:gap-0"
+                    href="https://www.youtube.com/@evilshideout" target="_blank" rel="noopener noreferrer">
+                    <div class="flex items-center gap-4 sm:gap-6 w-full sm:w-auto">
+                        <span class="font-label-mono text-label-mono text-on-surface-variant w-6 sm:w-8 shrink-0">02</span>
+                        <h2
+                            class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">
+                            YouTube</h2>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">@evilshideout</span>
-                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+                    <div class="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto pl-10 sm:pl-0">
+                        <span
+                            class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">@evilshideout</span>
+                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl"
+                            data-icon="arrow_forward">arrow_forward</span>
                     </div>
                 </a>
-                
+
                 <!-- Discord -->
-                <a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant cursor-pointer" href="https://discord.gg/t9y99QqNWs" target="_blank" rel="noopener noreferrer">
-                    <div class="flex items-center gap-6">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant w-8">03</span>
-                        <h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">Discord</h2>
+                <a class="social-item group flex flex-col sm:flex-row sm:items-center justify-between py-6 md:py-10 border-b border-outline-variant cursor-pointer gap-4 sm:gap-0"
+                    href="https://discord.gg/t9y99QqNWs" target="_blank" rel="noopener noreferrer">
+                    <div class="flex items-center gap-4 sm:gap-6 w-full sm:w-auto">
+                        <span class="font-label-mono text-label-mono text-on-surface-variant w-6 sm:w-8 shrink-0">03</span>
+                        <h2
+                            class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">
+                            Discord</h2>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">Chirag_7</span>
-                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+                    <div class="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto pl-10 sm:pl-0">
+                        <span
+                            class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">Chirag_7</span>
+                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl"
+                            data-icon="arrow_forward">arrow_forward</span>
                     </div>
                 </a>
-                
+
                 <!-- Subreddit -->
-                <a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant cursor-pointer" href="https://www.reddit.com/r/FootballDelhi/" target="_blank" rel="noopener noreferrer">
-                    <div class="flex items-center gap-6">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant w-8">04</span>
-                        <h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">Subreddit</h2>
+                <a class="social-item group flex flex-col sm:flex-row sm:items-center justify-between py-6 md:py-10 border-b border-outline-variant cursor-pointer gap-4 sm:gap-0"
+                    href="https://www.reddit.com/r/FootballDelhi/" target="_blank" rel="noopener noreferrer">
+                    <div class="flex items-center gap-4 sm:gap-6 w-full sm:w-auto">
+                        <span class="font-label-mono text-label-mono text-on-surface-variant w-6 sm:w-8 shrink-0">04</span>
+                        <h2
+                            class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">
+                            Subreddit</h2>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">r/FootballDelhi</span>
-                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+                    <div class="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto pl-10 sm:pl-0">
+                        <span
+                            class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">r/FootballDelhi</span>
+                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl"
+                            data-icon="arrow_forward">arrow_forward</span>
                     </div>
                 </a>
-                
+
                 <!-- GitHub -->
-                <a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant cursor-pointer" href="https://github.com/Chirag723" target="_blank" rel="noopener noreferrer">
-                    <div class="flex items-center gap-6">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant w-8">05</span>
-                        <h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">GitHub</h2>
+                <a class="social-item group flex flex-col sm:flex-row sm:items-center justify-between py-6 md:py-10 border-b border-outline-variant cursor-pointer gap-4 sm:gap-0"
+                    href="https://github.com/Chirag723" target="_blank" rel="noopener noreferrer">
+                    <div class="flex items-center gap-4 sm:gap-6 w-full sm:w-auto">
+                        <span class="font-label-mono text-label-mono text-on-surface-variant w-6 sm:w-8 shrink-0">05</span>
+                        <h2
+                            class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">
+                            GitHub</h2>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">Chirag723</span>
-                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+                    <div class="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto pl-10 sm:pl-0">
+                        <span
+                            class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">Chirag723</span>
+                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl"
+                            data-icon="arrow_forward">arrow_forward</span>
                     </div>
                 </a>
-                
+
                 <!-- X (Twitter) -->
-                <a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant cursor-pointer" href="https://x.com/CHIRAG_230" target="_blank" rel="noopener noreferrer">
+                <a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant cursor-pointer"
+                    href="https://x.com/CHIRAG_230" target="_blank" rel="noopener noreferrer">
                     <div class="flex items-center gap-6">
                         <span class="font-label-mono text-label-mono text-on-surface-variant w-8">06</span>
-                        <h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">X</h2>
+                        <h2
+                            class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">
+                            X</h2>
                     </div>
                     <div class="flex items-center gap-4">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">CHIRAG_230</span>
-                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+                        <span
+                            class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">CHIRAG_230</span>
+                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl"
+                            data-icon="arrow_forward">arrow_forward</span>
                     </div>
                 </a>
-                
+
                 <!-- LinkedIn -->
-                <a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant cursor-pointer" href="https://www.linkedin.com/in/chirag-jassi-4097352a2/" target="_blank" rel="noopener noreferrer">
+                <a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant cursor-pointer"
+                    href="https://www.linkedin.com/in/chirag-jassi-4097352a2/" target="_blank"
+                    rel="noopener noreferrer">
                     <div class="flex items-center gap-6">
                         <span class="font-label-mono text-label-mono text-on-surface-variant w-8">07</span>
-                        <h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">LinkedIn</h2>
+                        <h2
+                            class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">
+                            LinkedIn</h2>
                     </div>
                     <div class="flex items-center gap-4">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">Chirag Jassi</span>
-                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="arrow_forward">arrow_forward</span>
+                        <span
+                            class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">Chirag
+                            Jassi</span>
+                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl"
+                            data-icon="arrow_forward">arrow_forward</span>
                     </div>
                 </a>
-                
+
                 <!-- Email -->
-                <a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant cursor-pointer" href="mailto:jassichirag7@gmail.com">
+                <a class="social-item group flex items-center justify-between py-8 md:py-10 border-b border-outline-variant cursor-pointer"
+                    href="mailto:jassichirag7@gmail.com">
                     <div class="flex items-center gap-6">
                         <span class="font-label-mono text-label-mono text-on-surface-variant w-8">08</span>
-                        <h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">Email</h2>
+                        <h2
+                            class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface m-0 leading-none tracking-tight">
+                            Email</h2>
                     </div>
                     <div class="flex items-center gap-4">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">jassichirag7@gmail.com</span>
-                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl" data-icon="mail">mail</span>
+                        <span
+                            class="font-label-mono text-label-mono text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">jassichirag7@gmail.com</span>
+                        <span class="material-symbols-outlined text-on-surface social-arrow text-3xl"
+                            data-icon="mail">mail</span>
                     </div>
                 </a>
             </div>
@@ -296,8 +354,10 @@
 
     <!-- Footer -->
     <footer class="w-full py-stack-md border-t border-outline-variant bg-background transition-colors duration-300">
-        <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-4">
-            <div class="font-label-mono text-label-mono text-on-surface uppercase tracking-widest">© 2026 Designed By Chirag</div>
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-4">
+            <div class="font-label-mono text-label-mono text-on-surface uppercase tracking-widest">© 2026 Designed By
+                Chirag</div>
         </div>
     </footer>
 
@@ -337,4 +397,5 @@
         });
     </script>
 </body>
+
 </html>

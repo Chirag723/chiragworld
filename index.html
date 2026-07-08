@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Chirag | Portfolio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet">
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -116,9 +121,10 @@
         * {
             border-radius: 0px !important;
         }
-        
+
         /* Exception for circular elements if any */
-        .rounded-full, .rounded-full * {
+        .rounded-full,
+        .rounded-full * {
             border-radius: 9999px !important;
         }
 
@@ -128,17 +134,32 @@
             animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-        .delay-400 { animation-delay: 400ms; }
-        .delay-500 { animation-delay: 500ms; }
+        .delay-100 {
+            animation-delay: 100ms;
+        }
+
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+
+        .delay-300 {
+            animation-delay: 300ms;
+        }
+
+        .delay-400 {
+            animation-delay: 400ms;
+        }
+
+        .delay-500 {
+            animation-delay: 500ms;
+        }
 
         @keyframes revealUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -150,29 +171,47 @@
         }
 
         @keyframes glitch {
-            0% { transform: translate(0) }
-            20% { transform: translate(-2px, 2px) }
-            40% { transform: translate(-2px, -2px) }
-            60% { transform: translate(2px, 2px) }
-            80% { transform: translate(2px, -2px) }
-            100% { transform: translate(0) }
+            0% {
+                transform: translate(0)
+            }
+
+            20% {
+                transform: translate(-2px, 2px)
+            }
+
+            40% {
+                transform: translate(-2px, -2px)
+            }
+
+            60% {
+                transform: translate(2px, 2px)
+            }
+
+            80% {
+                transform: translate(2px, -2px)
+            }
+
+            100% {
+                transform: translate(0)
+            }
         }
     </style>
 </head>
-<body class="bg-background text-on-background min-h-screen flex flex-col pt-16 transition-colors duration-300">
+
+<body class="bg-background text-on-background min-h-screen flex flex-col pt-24 sm:pt-16 transition-colors duration-300">
     <!-- TopNavBar -->
     <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant transition-all duration-300">
-        <div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
-            <a href="index.html" class="font-label-mono text-label-mono tracking-widest text-on-surface uppercase glitch-hover cursor-pointer">CHIRAG.world</a>
+        <div class="flex flex-wrap sm:flex-nowrap justify-between items-center min-h-[4rem] py-3 sm:py-0 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full gap-y-4">
+            <a href="index.html" class="font-label-mono text-label-mono tracking-widest text-on-surface uppercase glitch-hover cursor-pointer shrink-0">CHIRAG.world</a>
             
             <!-- Navigation Links -->
-            <ul class="flex gap-6 md:gap-gutter items-center">
+            <ul class="flex gap-4 sm:gap-6 md:gap-gutter items-center order-last sm:order-none w-full sm:w-auto justify-center sm:justify-start">
                 <li><a class="font-body-md text-body-md text-on-surface font-bold border-b-2 border-on-surface pb-1 transition-colors duration-200" href="index.html">Me</a></li>
                 <li><a class="font-body-md text-body-md text-on-surface-variant opacity-60 hover:opacity-100 hover:text-on-surface transition-all duration-200" href="socials.html">Socials</a></li>
             </ul>
             
             <!-- Actions -->
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4 shrink-0">
                 <button aria-label="Toggle dark mode" class="text-on-surface hover:opacity-100 opacity-60 transition-all duration-200 p-2 hover:bg-surface-container-low rounded-full w-10 h-10 flex items-center justify-center">
                     <span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
                 </button>
@@ -181,16 +220,20 @@
     </nav>
 
     <!-- Main Content Canvas -->
-    <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-stack-xl py-stack-xl">
+    <main
+        class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-stack-xl py-stack-xl">
         <!-- Hero Section -->
         <section class="min-h-[60vh] flex flex-col justify-center gap-stack-md mt-8">
             <div class="flex flex-col gap-unit">
-                <h1 class="font-display-lg-mobile md:font-display-lg text-on-surface reveal-text delay-200 max-w-[14ch] font-bold text-[80px] md:text-[140px] leading-none tracking-tighter">CHIRAG</h1>
+                <h1 class="font-display-lg-mobile md:font-display-lg text-on-surface reveal-text delay-200 max-w-[14ch] font-bold text-[56px] sm:text-[80px] md:text-[140px] leading-none tracking-tighter">CHIRAG</h1>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mt-4">
                 <div class="md:col-span-8 lg:col-span-6 reveal-text delay-300">
                     <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                        I spend an unhealthy amount of time playing, watching, and following football, pushing myself in the gym, and replaying the same Eminem tracks for the hundredth time. The rest is usually spent tinkering with technology, building projects, and satisfying an endless curiosity for how things work behind the surface.
+                        I spend an unhealthy amount of time playing, watching, and following football, pushing myself in
+                        the gym, and replaying the same Eminem tracks for the hundredth time. The rest is usually spent
+                        tinkering with technology, building projects, and satisfying an endless curiosity for how things
+                        work behind the surface.
                     </p>
                 </div>
             </div>
@@ -199,18 +242,24 @@
         <!-- Featured Project (Bento Style) -->
         <section class="flex flex-col gap-stack-md reveal-text delay-500">
             <div class="flex justify-between items-end border-b border-outline-variant pb-4">
-                <h2 class="font-headline-sm text-headline-sm text-on-surface">Match Day Clicks</h2>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface">Clicks</h2>
                 <span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Photography</span>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-                <div class="md:col-span-4 aspect-[3/4] bg-surface-container-low overflow-hidden border border-outline-variant group">
-                    <img src="images/match_day_1.png" alt="Match Day 1" class="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                <div
+                    class="md:col-span-4 aspect-[3/4] bg-surface-container-low overflow-hidden border border-outline-variant group">
+                    <img src="images/match_day_1.png" alt="Match Day 1"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
                 </div>
-                <div class="md:col-span-4 aspect-[3/4] bg-surface-container-low overflow-hidden border border-outline-variant group">
-                    <img src="images/match_day_2.png" alt="Match Day 2" class="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                <div
+                    class="md:col-span-4 aspect-[3/4] bg-surface-container-low overflow-hidden border border-outline-variant group">
+                    <img src="images/match_day_2.png" alt="Match Day 2"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
                 </div>
-                <div class="md:col-span-4 aspect-[3/4] bg-surface-container-low overflow-hidden border border-outline-variant group">
-                    <img src="images/match_day_3.png" alt="Match Day 3" class="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                <div
+                    class="md:col-span-4 aspect-[3/4] bg-surface-container-low overflow-hidden border border-outline-variant group">
+                    <img src="images/match_day_3.png" alt="Match Day 3"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
                 </div>
             </div>
         </section>
@@ -218,8 +267,10 @@
 
     <!-- Footer -->
     <footer class="w-full py-stack-md border-t border-outline-variant bg-background transition-colors duration-300">
-        <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-4">
-            <div class="font-label-mono text-label-mono text-on-surface uppercase tracking-widest">© 2026 Designed By Chirag</div>
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-4">
+            <div class="font-label-mono text-label-mono text-on-surface uppercase tracking-widest">© 2026 Designed By
+                Chirag</div>
         </div>
     </footer>
 
@@ -260,4 +311,5 @@
         });
     </script>
 </body>
+
 </html>
